@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         minigameSwitch.isHidden = true
         minigameLabel.isHidden = true
         
-        self.arView.debugOptions = [.showStatistics]
+        //self.arView.debugOptions = [.showStatistics]
         
     }
     

@@ -15,7 +15,6 @@
 		157AE5892455956000BE7809 /* RedPanda.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 157AE5882455956000BE7809 /* RedPanda.usdz */; };
 		157AE58B2455959800BE7809 /* Bear.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 157AE58A2455959800BE7809 /* Bear.usdz */; };
 		1594B45F245E86B8008463BA /* PassThroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1594B45E245E86B8008463BA /* PassThroughView.swift */; };
-		1594B461245E8D82008463BA /* TraceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1594B460245E8D82008463BA /* TraceViewController.swift */; };
 		1594B465245E9290008463BA /* TraceGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1594B464245E9290008463BA /* TraceGame.storyboard */; };
 		15986816241EE627009456EF /* TraceGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15986815241EE627009456EF /* TraceGame.swift */; };
 		1598681A242451FA009456EF /* Minigame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15986819242451FA009456EF /* Minigame.swift */; };
@@ -47,6 +46,7 @@
 		19989C40244AACBE001C1C7F /* README in Resources */ = {isa = PBXBuildFile; fileRef = 19989C3F244AACBE001C1C7F /* README */; };
 		19B1736A2403475400845819 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B173692403475400845819 /* Tile.swift */; };
 		19DEDE7B243EB2B20090CA15 /* ViewManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DEDE7A243EB2B20090CA15 /* ViewManipulation.swift */; };
+		8CE1B72525215636000E0FDE /* TraceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE1B72425215636000E0FDE /* TraceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,6 @@
 		157AE5882455956000BE7809 /* RedPanda.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = RedPanda.usdz; sourceTree = "<group>"; };
 		157AE58A2455959800BE7809 /* Bear.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Bear.usdz; sourceTree = "<group>"; };
 		1594B45E245E86B8008463BA /* PassThroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassThroughView.swift; sourceTree = "<group>"; };
-		1594B460245E8D82008463BA /* TraceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceViewController.swift; sourceTree = "<group>"; };
 		1594B464245E9290008463BA /* TraceGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TraceGame.storyboard; sourceTree = "<group>"; };
 		15986815241EE627009456EF /* TraceGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceGame.swift; sourceTree = "<group>"; };
 		15986819242451FA009456EF /* Minigame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minigame.swift; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		19989C3F244AACBE001C1C7F /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		19B173692403475400845819 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		19DEDE7A243EB2B20090CA15 /* ViewManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManipulation.swift; sourceTree = "<group>"; };
+		8CE1B72425215636000E0FDE /* TraceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraceViewController.swift; path = ARrehab/Minigames/TrialGame/TraceViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,8 +206,8 @@
 			children = (
 				15BB4C88245F55130033A18D /* UIViewExtension.swift */,
 				1594B45E245E86B8008463BA /* PassThroughView.swift */,
-				15AC2BAE2479C5BC00D5DFB6 /* TraceGame */,
 				15AC2BAF2479C5DE00D5DFB6 /* MovementGame */,
+				15AC2BAE2479C5BC00D5DFB6 /* TraceGame */,
 				15B4A790245E2EB8005CC9EC /* Default.storyboard */,
 				15986819242451FA009456EF /* Minigame.swift */,
 				15AC2BB02479C66E00D5DFB6 /* README.md */,
@@ -219,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				15986815241EE627009456EF /* TraceGame.swift */,
-				1594B460245E8D82008463BA /* TraceViewController.swift */,
+				8CE1B72425215636000E0FDE /* TraceViewController.swift */,
 				15BB4C82245F53130033A18D /* TraceProgressSection.swift */,
 				15BB4C86245F53870033A18D /* TraceTargetType.swift */,
 				15BB4C84245F534D0033A18D /* TraceStackView.swift */,
@@ -421,12 +421,12 @@
 				15BB4C87245F53870033A18D /* TraceTargetType.swift in Sources */,
 				15986816241EE627009456EF /* TraceGame.swift in Sources */,
 				19B1736A2403475400845819 /* Tile.swift in Sources */,
+				8CE1B72525215636000E0FDE /* TraceViewController.swift in Sources */,
 				15CE526524608E7300A22B0B /* MovementState.swift in Sources */,
 				159994D92481CA8500BC40AA /* Background.rcproject in Sources */,
 				15BB4C8B245FA3420033A18D /* MovementViewController.swift in Sources */,
 				1594B45F245E86B8008463BA /* PassThroughView.swift in Sources */,
 				15BB4C83245F53130033A18D /* TraceProgressSection.swift in Sources */,
-				1594B461245E8D82008463BA /* TraceViewController.swift in Sources */,
 				15E002DE243AA3CD00BA6A96 /* MovementGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,13 +604,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 832VQUJPML;
+				DEVELOPMENT_TEAM = YB36LGNH5U;
 				INFOPLIST_FILE = ARrehab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ssen.ARrehab;
+				PRODUCT_BUNDLE_IDENTIFIER = jnoh1.ARrehab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -622,13 +622,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 832VQUJPML;
+				DEVELOPMENT_TEAM = YB36LGNH5U;
 				INFOPLIST_FILE = ARrehab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ssen.ARrehab;
+				PRODUCT_BUNDLE_IDENTIFIER = jnoh1.ARrehab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

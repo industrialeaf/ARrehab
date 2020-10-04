@@ -42,34 +42,8 @@ class MovementGame : Minigame {
     
     var timer: Timer? = nil
     
-    var targets : [TraceTargetType] = [.fox, .bear, .puffer]
-    
     convenience required init() {
         self.init(num: 1)
-    }
-    
-    // Creates the objects to be picked up
-    func generateTargets() {
-        var models : [TraceTargetType : ModelComponent] = [:]
-        
-        targets.forEach { (targetType) in
-            do {
-                models.updateValue((try Entity.loadModel(named: targetType.modelName).model!), forKey: targetType)
-            } catch {
-                models.updateValue((ModelComponent(mesh: MeshResource.generateSphere(radius: 0.05), materials: [SimpleMaterial(color: .purple, isMetallic: false)])), forKey: TraceTargetType.other)
-            }
-        }
-
-        for _ in 1 ... total {
-            let (targetType, model) = models.randomElement()!
-            let posMin = targetType.minPosition
-            let posMax = targetType.maxPosition
-            let point : TracePoint = TracePoint(model: model, translation: SIMD3<Float>(Float.random(in: posMin[0] ... posMax[0]), Float.random(in: posMin[1] ... posMax[1]), Float.random(in:posMin[2] ... posMax[2])), targetType: targetType)
-            //point.collision?.filter = CollisionFilter(group: self.pointCollisionGroup, mask: self.laserCollisionGroup)
-           
-           //pointCloud.append(point)
-           self.addChild(point)
-        }
     }
     
     required init(num: Int) {
@@ -123,8 +97,6 @@ class MovementGame : Minigame {
         // Move the squat target down by 0.4 m.
         hardTarget.transform.translation = SIMD3<Float>(0,-0.4,0)
         self.addChild(hardTarget)
-        // Add the objects to pick up
-        generateTargets()
     }
     
     /// Attaches the Movement Game to the ground anchor with the same transformation as the player.

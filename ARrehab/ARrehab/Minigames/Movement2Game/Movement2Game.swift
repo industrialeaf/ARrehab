@@ -1,10 +1,11 @@
 //
-//  MovementGame.swift
+//  Movement2Game.swift
 //  ARrehab
 //
-//  Created by Eric Wang on 4/5/20.
+//  Created by Jonah Noh on 9/27/20.
 //  Copyright © 2020 Eric Wang. All rights reserved.
 //
+
 import Foundation
 import RealityKit
 import Combine
@@ -14,7 +15,7 @@ import Dispatch
 /**
 Movement Game Entity holds a representatioin of where the user needs to go and the detection mechanism to determine if the user has completed the action.
  */
-class MovementGame : Minigame {
+class Movement2Game : Minigame {
     
     /// Collision group for the MovementTarget
     var targetCollisionGroup : CollisionGroup
@@ -48,7 +49,6 @@ class MovementGame : Minigame {
         self.init(num: 1)
     }
     
-    // Creates the objects to be picked up
     func generateTargets() {
         var models : [TraceTargetType : ModelComponent] = [:]
         
@@ -86,7 +86,7 @@ class MovementGame : Minigame {
             self.progress[1] = (-self.playerCollisionEntity.convert(position: SIMD3<Float>(0,0,0), to: self).y)/0.4
             var stateIsDown : MovementState? = nil
             self.children.forEach { (entity) in
-                guard let target = entity as? MovementTarget else {
+                guard let target = entity as? Movement2Target else {
                     return
                 }
                 if (stateIsDown == nil) {
@@ -123,8 +123,6 @@ class MovementGame : Minigame {
         // Move the squat target down by 0.4 m.
         hardTarget.transform.translation = SIMD3<Float>(0,-0.4,0)
         self.addChild(hardTarget)
-        // Add the objects to pick up
-        generateTargets()
     }
     
     /// Attaches the Movement Game to the ground anchor with the same transformation as the player.
@@ -148,7 +146,7 @@ class MovementGame : Minigame {
         self.getPlayerCollisionEntity().isEnabled = true
         assert(self.getPlayerCollisionEntity().isActive == true, "Warning PlayerCollisionEntity is not active")
         for child in self.children {
-            if let entity = child as? MovementTarget {
+            if let entity = child as? Movement2Target {
                 entity.active = true
                 assert(entity.isActive == true, "Warning MovementTarget is not active")
             }
@@ -182,7 +180,7 @@ class MovementGame : Minigame {
         guard let scene = self.scene else {return}
         self.subscriptions.append(scene.subscribe(to: CollisionEvents.Began.self, on: getPlayerCollisionEntity()) { event in
             print("Movement Game Collision began")
-            guard let target = event.entityB as? MovementTarget else {
+            guard let target = event.entityB as? Movement2Target else {
                 return
             }
             target.onCollisionBegan()
@@ -201,7 +199,7 @@ class MovementGame : Minigame {
         
         self.subscriptions.append(scene.subscribe(to: CollisionEvents.Ended.self, on: getPlayerCollisionEntity()) { event in
             print("Movement Game Collision Ended Start")
-            guard let target = event.entityB as? MovementTarget else {
+            guard let target = event.entityB as? Movement2Target else {
                 return
             }
             target.onCollisionEnded()
@@ -217,7 +215,7 @@ class MovementGame : Minigame {
  In its normal orientation, it drives the player towards the left.
  By default, it begins as gray, changes color upon contact to yellow, to green upon completion.
  */
-class MovementTarget : Entity, HasModel, HasCollision {
+class Movement2Target : Entity, HasModel, HasCollision {
     /// Is this target still active (as opposed to completed)
     var active = true
     /// The time this target will be completed
@@ -327,3 +325,4 @@ class MovementTarget : Entity, HasModel, HasCollision {
         print("materials set")
     }
 }
+
