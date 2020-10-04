@@ -17,8 +17,12 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var saveExperienceButton: UIButton!
     @IBOutlet weak var loadExperienceButton: UIButton!
+    @IBOutlet weak var decorationModeButton: UIButton!
+    @IBOutlet weak var discardDecorButton: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var snapshotThumbnail: UIImageView!
+    
+    var isInDecorationMode: Bool = false
     
     // MARK: - View Life Cycle
     
@@ -31,9 +35,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         super.viewDidLoad()
         
         // Read in any already saved map to see if we can load one.
-        if mapDataFromFile != nil {
-            self.loadExperienceButton.isHidden = false
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,6 +53,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         }
         
         // Start the view's AR session.
+        
+        exitDecorationMode()
+        
         sceneView.session.delegate = self
         sceneView.session.run(defaultConfiguration)
         
@@ -93,18 +97,20 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     /// - Tag: CheckMappingStatus
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         // Enable Save button only when the mapping status is good and an object has been placed
-        switch frame.worldMappingStatus {
-        case .extending, .mapped:
-            saveExperienceButton.isEnabled =
-                virtualObjectAnchor != nil && frame.anchors.contains(virtualObjectAnchor!)
-        default:
-            saveExperienceButton.isEnabled = false
+        if isInDecorationMode {
+            switch frame.worldMappingStatus {
+            case .extending, .mapped:
+                saveExperienceButton.isEnabled =
+                    virtualObjectAnchor != nil && frame.anchors.contains(virtualObjectAnchor!)
+            default:
+                saveExperienceButton.isEnabled = false
+            }
+            statusLabel.text = """
+            Mapping: \(frame.worldMappingStatus.description)
+            Tracking: \(frame.camera.trackingState.description)
+            """
+            updateSessionInfoLabel(for: frame, trackingState: frame.camera.trackingState)
         }
-        statusLabel.text = """
-        Mapping: \(frame.worldMappingStatus.description)
-        Tracking: \(frame.camera.trackingState.description)
-        """
-        updateSessionInfoLabel(for: frame, trackingState: frame.camera.trackingState)
     }
     
     // MARK: - ARSessionObserver
@@ -163,6 +169,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         }
     }()
     
+    func readSavedWorldNames() -> Array<String> {
+        let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        do {
+            let savedWorldFiles = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil).filter{ $0.pathExtension == "arexperience" }
+            return savedWorldFiles.map{ $0.deletingPathExtension().lastPathComponent }
+        } catch {
+            fatalError("Can't load saved worlds")
+        }
+    }
+    
     /// - Tag: GetWorldMap
     @IBAction func saveExperience(_ button: UIButton) {
         sceneView.session.getCurrentWorldMap { worldMap, error in
@@ -185,6 +201,27 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
                 fatalError("Can't save map: \(error.localizedDescription)")
             }
         }
+        exitDecorationMode()
+    }
+    
+    @IBAction func enterDecorationMode(_ button: UIButton) {
+        isInDecorationMode = true
+        saveExperienceButton.isHidden = false
+        loadExperienceButton.isHidden = false
+        discardDecorButton.isHidden = false
+        discardDecorButton.isEnabled = true
+        if mapDataFromFile != nil {
+            self.loadExperienceButton.isHidden = false
+        }
+    }
+
+    @IBAction func exitDecorationMode() {
+        decorationModeButton.isHidden = false
+        saveExperienceButton.isHidden = true
+        loadExperienceButton.isHidden = true
+        isInDecorationMode = false
+        discardDecorButton.isHidden = true
+        discardDecorButton.isEnabled = false
     }
     
     // Called opportunistically to verify that map data can be loaded from filesystem.
@@ -207,7 +244,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
                 fatalError("Can't unarchive ARWorldMap from file data: \(error)")
             }
         }()
-        
+
         // Display the snapshot image stored in the world map to aid user in relocalizing.
         if let snapshotData = worldMap.snapshotAnchor?.imageData,
             let snapshot = UIImage(data: snapshotData) {
@@ -281,14 +318,19 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     /// - Tag: PlaceObject
     @IBAction func handleSceneTap(_ sender: UITapGestureRecognizer) {
         // Disable placing objects when the session is still relocalizing
+        print("tap detected")
         if isRelocalizingMap && virtualObjectAnchor == nil {
+            print("fail 1")
             return
         }
         // Hit test to find a place for a virtual object.
         guard let hitTestResult = sceneView
             .hitTest(sender.location(in: sceneView), types: [.existingPlaneUsingGeometry, .estimatedHorizontalPlane])
             .first
-            else { return }
+            else {
+                print("fail 3")
+                return
+            }
         
         // Remove exisitng anchor and add new anchor
         if let existingAnchor = virtualObjectAnchor {
@@ -312,4 +354,5 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     }()
     
 }
+
 
