@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,33 @@
 		842316E71F2030C300D189D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842316E51F2030C300D189D1 /* Main.storyboard */; };
 		842316EC1F2030C300D189D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842316EA1F2030C300D189D1 /* LaunchScreen.storyboard */; };
 		84ABEA0A1F3D15E70052D547 /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 84ABEA091F3D15E70052D547 /* Assets.scnassets */; };
+		8C39D9322533CDBF001FEF08 /* MultiProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = 8C39D9312533CDBF001FEF08 /* MultiProgressView */; };
+		8C39DA042533D2C4001FEF08 /* Default.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C39D9E02533D2C4001FEF08 /* Default.storyboard */; };
+		8C39DA052533D2C4001FEF08 /* PassThroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9E12533D2C4001FEF08 /* PassThroughView.swift */; };
+		8C39DA092533D2C4001FEF08 /* MovementState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9E72533D2C4001FEF08 /* MovementState.swift */; };
+		8C39DA0A2533D2C4001FEF08 /* MovementGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9E82533D2C4001FEF08 /* MovementGame.swift */; };
+		8C39DA0B2533D2C4001FEF08 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C39D9E92533D2C4001FEF08 /* up.png */; };
+		8C39DA0D2533D2C4001FEF08 /* TraceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9EB2533D2C4001FEF08 /* TraceViewController.swift */; };
+		8C39DA0F2533D2C4001FEF08 /* MovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9ED2533D2C4001FEF08 /* MovementViewController.swift */; };
+		8C39DA102533D2C4001FEF08 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9EE2533D2C4001FEF08 /* UIViewExtension.swift */; };
+		8C39DA112533D2C4001FEF08 /* MovementState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9F02533D2C4001FEF08 /* MovementState.swift */; };
+		8C39DA122533D2C4001FEF08 /* MovementGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9F12533D2C4001FEF08 /* MovementGame.swift */; };
+		8C39DA142533D2C4001FEF08 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C39D9F32533D2C4001FEF08 /* down.png */; };
+		8C39DA152533D2C4001FEF08 /* MovementGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C39D9F42533D2C4001FEF08 /* MovementGame.storyboard */; };
+		8C39DA162533D2C4001FEF08 /* MovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9F52533D2C4001FEF08 /* MovementViewController.swift */; };
+		8C39DA172533D2C4001FEF08 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8C39D9F62533D2C4001FEF08 /* README.md */; };
+		8C39DA182533D2C4001FEF08 /* Wolf.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C39D9F82533D2C4001FEF08 /* Wolf.usdz */; };
+		8C39DA192533D2C4001FEF08 /* Puffer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C39D9F92533D2C4001FEF08 /* Puffer.usdz */; };
+		8C39DA1A2533D2C4001FEF08 /* Fox.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C39D9FA2533D2C4001FEF08 /* Fox.usdz */; };
+		8C39DA1B2533D2C4001FEF08 /* TraceProgressSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9FB2533D2C4001FEF08 /* TraceProgressSection.swift */; };
+		8C39DA1C2533D2C4001FEF08 /* TraceTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9FC2533D2C4001FEF08 /* TraceTargetType.swift */; };
+		8C39DA1D2533D2C4001FEF08 /* Deer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C39D9FD2533D2C4001FEF08 /* Deer.usdz */; };
+		8C39DA1E2533D2C4001FEF08 /* TraceGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C39D9FE2533D2C4001FEF08 /* TraceGame.storyboard */; };
+		8C39DA1F2533D2C4001FEF08 /* TraceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D9FF2533D2C4001FEF08 /* TraceViewController.swift */; };
+		8C39DA202533D2C4001FEF08 /* RedPanda.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C39DA002533D2C4001FEF08 /* RedPanda.usdz */; };
+		8C39DA212533D2C4001FEF08 /* TraceGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39DA012533D2C4001FEF08 /* TraceGame.swift */; };
+		8C39DA222533D2C4001FEF08 /* Bear.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C39DA022533D2C4001FEF08 /* Bear.usdz */; };
+		8C39DA232533D2C4001FEF08 /* TraceStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39DA032533D2C4001FEF08 /* TraceStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +60,35 @@
 		842316EB1F2030C300D189D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842316ED1F2030C300D189D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84ABEA091F3D15E70052D547 /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
+		8C39D9E02533D2C4001FEF08 /* Default.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Default.storyboard; sourceTree = "<group>"; };
+		8C39D9E12533D2C4001FEF08 /* PassThroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassThroughView.swift; sourceTree = "<group>"; };
+		8C39D9E72533D2C4001FEF08 /* MovementState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementState.swift; sourceTree = "<group>"; };
+		8C39D9E82533D2C4001FEF08 /* MovementGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementGame.swift; sourceTree = "<group>"; };
+		8C39D9E92533D2C4001FEF08 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		8C39D9EA2533D2C4001FEF08 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		8C39D9EB2533D2C4001FEF08 /* TraceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceViewController.swift; sourceTree = "<group>"; };
+		8C39D9EC2533D2C4001FEF08 /* MovementGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MovementGame.storyboard; sourceTree = "<group>"; };
+		8C39D9ED2533D2C4001FEF08 /* MovementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementViewController.swift; sourceTree = "<group>"; };
+		8C39D9EE2533D2C4001FEF08 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		8C39D9F02533D2C4001FEF08 /* MovementState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementState.swift; sourceTree = "<group>"; };
+		8C39D9F12533D2C4001FEF08 /* MovementGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementGame.swift; sourceTree = "<group>"; };
+		8C39D9F22533D2C4001FEF08 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		8C39D9F32533D2C4001FEF08 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		8C39D9F42533D2C4001FEF08 /* MovementGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MovementGame.storyboard; sourceTree = "<group>"; };
+		8C39D9F52533D2C4001FEF08 /* MovementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementViewController.swift; sourceTree = "<group>"; };
+		8C39D9F62533D2C4001FEF08 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8C39D9F82533D2C4001FEF08 /* Wolf.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Wolf.usdz; sourceTree = "<group>"; };
+		8C39D9F92533D2C4001FEF08 /* Puffer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Puffer.usdz; sourceTree = "<group>"; };
+		8C39D9FA2533D2C4001FEF08 /* Fox.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Fox.usdz; sourceTree = "<group>"; };
+		8C39D9FB2533D2C4001FEF08 /* TraceProgressSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceProgressSection.swift; sourceTree = "<group>"; };
+		8C39D9FC2533D2C4001FEF08 /* TraceTargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceTargetType.swift; sourceTree = "<group>"; };
+		8C39D9FD2533D2C4001FEF08 /* Deer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Deer.usdz; sourceTree = "<group>"; };
+		8C39D9FE2533D2C4001FEF08 /* TraceGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TraceGame.storyboard; sourceTree = "<group>"; };
+		8C39D9FF2533D2C4001FEF08 /* TraceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceViewController.swift; sourceTree = "<group>"; };
+		8C39DA002533D2C4001FEF08 /* RedPanda.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = RedPanda.usdz; sourceTree = "<group>"; };
+		8C39DA012533D2C4001FEF08 /* TraceGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceGame.swift; sourceTree = "<group>"; };
+		8C39DA022533D2C4001FEF08 /* Bear.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Bear.usdz; sourceTree = "<group>"; };
+		8C39DA032533D2C4001FEF08 /* TraceStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceStackView.swift; sourceTree = "<group>"; };
 		E292F9BA5F620955E859EA24 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C39D9322533CDBF001FEF08 /* MultiProgressView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +134,7 @@
 		842316DE1F2030C300D189D1 /* ARPersistence */ = {
 			isa = PBXGroup;
 			children = (
+				8C39D9DF2533D2C4001FEF08 /* Minigames */,
 				842316E31F2030C300D189D1 /* ViewController.swift */,
 				5CB92B4E20D852B0004D38D8 /* SnapshotAnchor.swift */,
 				11E97209209A355F006E3D26 /* Utilities.swift */,
@@ -89,6 +147,67 @@
 				112FE5661F4F95A200BF85EA /* Assets.xcassets */,
 			);
 			path = ARPersistence;
+			sourceTree = "<group>";
+		};
+		8C39D9DF2533D2C4001FEF08 /* Minigames */ = {
+			isa = PBXGroup;
+			children = (
+				8C39D9E02533D2C4001FEF08 /* Default.storyboard */,
+				8C39D9E12533D2C4001FEF08 /* PassThroughView.swift */,
+				8C39D9E62533D2C4001FEF08 /* TrialGame */,
+				8C39D9EE2533D2C4001FEF08 /* UIViewExtension.swift */,
+				8C39D9EF2533D2C4001FEF08 /* MovementGame */,
+				8C39D9F62533D2C4001FEF08 /* README.md */,
+				8C39D9F72533D2C4001FEF08 /* TraceGame */,
+			);
+			name = Minigames;
+			path = ../../Desktop/ARrehab/ARrehab/ARrehab/Minigames;
+			sourceTree = "<group>";
+		};
+		8C39D9E62533D2C4001FEF08 /* TrialGame */ = {
+			isa = PBXGroup;
+			children = (
+				8C39D9E72533D2C4001FEF08 /* MovementState.swift */,
+				8C39D9E82533D2C4001FEF08 /* MovementGame.swift */,
+				8C39D9E92533D2C4001FEF08 /* up.png */,
+				8C39D9EA2533D2C4001FEF08 /* down.png */,
+				8C39D9EB2533D2C4001FEF08 /* TraceViewController.swift */,
+				8C39D9EC2533D2C4001FEF08 /* MovementGame.storyboard */,
+				8C39D9ED2533D2C4001FEF08 /* MovementViewController.swift */,
+			);
+			path = TrialGame;
+			sourceTree = "<group>";
+		};
+		8C39D9EF2533D2C4001FEF08 /* MovementGame */ = {
+			isa = PBXGroup;
+			children = (
+				8C39D9F02533D2C4001FEF08 /* MovementState.swift */,
+				8C39D9F12533D2C4001FEF08 /* MovementGame.swift */,
+				8C39D9F22533D2C4001FEF08 /* up.png */,
+				8C39D9F32533D2C4001FEF08 /* down.png */,
+				8C39D9F42533D2C4001FEF08 /* MovementGame.storyboard */,
+				8C39D9F52533D2C4001FEF08 /* MovementViewController.swift */,
+			);
+			path = MovementGame;
+			sourceTree = "<group>";
+		};
+		8C39D9F72533D2C4001FEF08 /* TraceGame */ = {
+			isa = PBXGroup;
+			children = (
+				8C39D9F82533D2C4001FEF08 /* Wolf.usdz */,
+				8C39D9F92533D2C4001FEF08 /* Puffer.usdz */,
+				8C39D9FA2533D2C4001FEF08 /* Fox.usdz */,
+				8C39D9FB2533D2C4001FEF08 /* TraceProgressSection.swift */,
+				8C39D9FC2533D2C4001FEF08 /* TraceTargetType.swift */,
+				8C39D9FD2533D2C4001FEF08 /* Deer.usdz */,
+				8C39D9FE2533D2C4001FEF08 /* TraceGame.storyboard */,
+				8C39D9FF2533D2C4001FEF08 /* TraceViewController.swift */,
+				8C39DA002533D2C4001FEF08 /* RedPanda.usdz */,
+				8C39DA012533D2C4001FEF08 /* TraceGame.swift */,
+				8C39DA022533D2C4001FEF08 /* Bear.usdz */,
+				8C39DA032533D2C4001FEF08 /* TraceStackView.swift */,
+			);
+			path = TraceGame;
 			sourceTree = "<group>";
 		};
 		9265C1324689158CAFBECF44 /* LICENSE */ = {
@@ -115,6 +234,9 @@
 			dependencies = (
 			);
 			name = ARPersistence;
+			packageProductDependencies = (
+				8C39D9312533CDBF001FEF08 /* MultiProgressView */,
+			);
 			productName = ARMultiuser;
 			productReference = 842316DC1F2030C300D189D1 /* ARPersistence.app */;
 			productType = "com.apple.product-type.application";
@@ -145,6 +267,9 @@
 				Base,
 			);
 			mainGroup = 842316D31F2030C300D189D1;
+			packageReferences = (
+				8C39D9302533CDBF001FEF08 /* XCRemoteSwiftPackageReference "MultiProgressView" */,
+			);
 			productRefGroup = 842316DD1F2030C300D189D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,11 +284,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C39DA0B2533D2C4001FEF08 /* up.png in Resources */,
+				8C39DA1E2533D2C4001FEF08 /* TraceGame.storyboard in Resources */,
 				84ABEA0A1F3D15E70052D547 /* Assets.scnassets in Resources */,
 				842316EC1F2030C300D189D1 /* LaunchScreen.storyboard in Resources */,
+				8C39DA172533D2C4001FEF08 /* README.md in Resources */,
+				8C39DA1D2533D2C4001FEF08 /* Deer.usdz in Resources */,
+				8C39DA142533D2C4001FEF08 /* down.png in Resources */,
 				5C7AB42A20DC114B00693DDD /* README.md in Resources */,
+				8C39DA222533D2C4001FEF08 /* Bear.usdz in Resources */,
+				8C39DA1A2533D2C4001FEF08 /* Fox.usdz in Resources */,
+				8C39DA192533D2C4001FEF08 /* Puffer.usdz in Resources */,
 				112FE5671F4F95A200BF85EA /* Assets.xcassets in Resources */,
+				8C39DA042533D2C4001FEF08 /* Default.storyboard in Resources */,
 				842316E71F2030C300D189D1 /* Main.storyboard in Resources */,
+				8C39DA202533D2C4001FEF08 /* RedPanda.usdz in Resources */,
+				8C39DA152533D2C4001FEF08 /* MovementGame.storyboard in Resources */,
+				8C39DA182533D2C4001FEF08 /* Wolf.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,9 +312,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				11E9720A209A355F006E3D26 /* Utilities.swift in Sources */,
+				8C39DA162533D2C4001FEF08 /* MovementViewController.swift in Sources */,
 				5CB92B4F20D852B0004D38D8 /* SnapshotAnchor.swift in Sources */,
+				8C39DA232533D2C4001FEF08 /* TraceStackView.swift in Sources */,
+				8C39DA1C2533D2C4001FEF08 /* TraceTargetType.swift in Sources */,
+				8C39DA122533D2C4001FEF08 /* MovementGame.swift in Sources */,
 				111DC86920ACAB690037F7B1 /* RoundedButton.swift in Sources */,
+				8C39DA112533D2C4001FEF08 /* MovementState.swift in Sources */,
+				8C39DA212533D2C4001FEF08 /* TraceGame.swift in Sources */,
+				8C39DA0F2533D2C4001FEF08 /* MovementViewController.swift in Sources */,
+				8C39DA102533D2C4001FEF08 /* UIViewExtension.swift in Sources */,
+				8C39DA1B2533D2C4001FEF08 /* TraceProgressSection.swift in Sources */,
+				8C39DA052533D2C4001FEF08 /* PassThroughView.swift in Sources */,
+				8C39DA0A2533D2C4001FEF08 /* MovementGame.swift in Sources */,
 				842316E41F2030C300D189D1 /* ViewController.swift in Sources */,
+				8C39DA092533D2C4001FEF08 /* MovementState.swift in Sources */,
+				8C39DA0D2533D2C4001FEF08 /* TraceViewController.swift in Sources */,
+				8C39DA1F2533D2C4001FEF08 /* TraceViewController.swift in Sources */,
 				842316E01F2030C300D189D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -303,10 +454,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -321,7 +473,10 @@
 				DEVELOPMENT_TEAM = YB36LGNH5U;
 				INFOPLIST_FILE = "$(SRCROOT)/ARPersistence/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ARPersistencejnoh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -341,7 +496,10 @@
 				DEVELOPMENT_TEAM = YB36LGNH5U;
 				INFOPLIST_FILE = "$(SRCROOT)/ARPersistence/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ARPersistencejnoh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -373,6 +531,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C39D9302533CDBF001FEF08 /* XCRemoteSwiftPackageReference "MultiProgressView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-gallagher/MultiProgressView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C39D9312533CDBF001FEF08 /* MultiProgressView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C39D9302533CDBF001FEF08 /* XCRemoteSwiftPackageReference "MultiProgressView" */;
+			productName = MultiProgressView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 842316D41F2030C300D189D1 /* Project object */;
 }
