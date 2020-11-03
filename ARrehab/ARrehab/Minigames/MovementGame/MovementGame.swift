@@ -49,7 +49,7 @@ class MovementGame : Minigame {
     }
     
     // Creates the objects to be picked up
-    func generateTargets() {
+    func generateTargets(ground: Entity, player: Entity) {
         var models : [TraceTargetType : ModelComponent] = [:]
         
         targets.forEach { (targetType) in
@@ -64,11 +64,27 @@ class MovementGame : Minigame {
             let (targetType, model) = models.randomElement()!
             let posMin = targetType.minPosition
             let posMax = targetType.maxPosition
-            let point : TracePoint = TracePoint(model: model, translation: SIMD3<Float>(Float.random(in: posMin[0] ... posMax[0]), Float.random(in: posMin[1] ... posMax[1]), Float.random(in:posMin[2] ... posMax[2])), targetType: targetType)
+            // TODO may be unecessary considering we anchor objects with point.look instead
+            let point : TracePoint = TracePoint(model: model, translation: SIMD3<Float>(Float.random(in: posMin[0] ... posMax[0]), -3, Float.random(in:posMin[2] ... posMax[2])), targetType: targetType) //let everything else be random, but set y so that it is on the ground
             //point.collision?.filter = CollisionFilter(group: self.pointCollisionGroup, mask: self.laserCollisionGroup)
-           
-           //pointCloud.append(point)
-           self.addChild(point)
+            //pointCloud.append(point)
+            self.addChild(point)
+            ground.addChild(point)
+            
+            var playerPosition = player.position(relativeTo: ground)
+            // Our object position
+            // Currently its set to be 1m in front of the camera
+            var targetPosition = player.convert(position: SIMD3<Float>(Float.random(in: posMin[0] ... posMax[0]), Float.random(in: posMin[0] ... posMax[0]), Float.random(in:posMin[2] ... posMax[2])), to: ground)
+            // Get the position transform from the player to the target
+            targetPosition = targetPosition - playerPosition
+            // Extract the x and z values of the transform (Find the projection to the ground plane)
+            targetPosition.y = 0
+            playerPosition.y = 0
+            // Get a unit vector of our target projection then add it to our player position
+            targetPosition = simd_normalize(targetPosition) + playerPosition
+            // This should result in a position denoted by a 1m vector extending out from the player in the XZ direction the player is facing. This position is fixed at a height of 0 m.
+            // Set the target at the desired position and orient it towards the player.
+            point.look(at: playerPosition, from: targetPosition, relativeTo: ground)
         }
     }
     
@@ -123,8 +139,6 @@ class MovementGame : Minigame {
         // Move the squat target down by 0.4 m.
         hardTarget.transform.translation = SIMD3<Float>(0,-0.4,0)
         self.addChild(hardTarget)
-        // Add the objects to pick up
-        generateTargets()
     }
     
     /// Attaches the Movement Game to the ground anchor with the same transformation as the player.
@@ -142,6 +156,9 @@ class MovementGame : Minigame {
         print(self.transform.translation)
         
         player.addChild(self.getPlayerCollisionEntity())
+        
+        // Add the objects to pick up
+        generateTargets(ground: ground, player: player)
     }
     
     override func run() -> Bool {

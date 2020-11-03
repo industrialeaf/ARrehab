@@ -17,7 +17,6 @@
 		1594B45F245E86B8008463BA /* PassThroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1594B45E245E86B8008463BA /* PassThroughView.swift */; };
 		1594B465245E9290008463BA /* TraceGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1594B464245E9290008463BA /* TraceGame.storyboard */; };
 		15986816241EE627009456EF /* TraceGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15986815241EE627009456EF /* TraceGame.swift */; };
-		1598681A242451FA009456EF /* Minigame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15986819242451FA009456EF /* Minigame.swift */; };
 		159994D92481CA8500BC40AA /* Background.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 159994D82481CA8500BC40AA /* Background.rcproject */; };
 		159A41ED23F49283000A5376 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159A41EC23F49283000A5376 /* AppDelegate.swift */; };
 		159A41EF23F49283000A5376 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159A41EE23F49283000A5376 /* ViewController.swift */; };
@@ -46,6 +45,8 @@
 		19989C40244AACBE001C1C7F /* README in Resources */ = {isa = PBXBuildFile; fileRef = 19989C3F244AACBE001C1C7F /* README */; };
 		19B1736A2403475400845819 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B173692403475400845819 /* Tile.swift */; };
 		19DEDE7B243EB2B20090CA15 /* ViewManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DEDE7A243EB2B20090CA15 /* ViewManipulation.swift */; };
+		8C203B74254F68BF00098310 /* LaunchMovementGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C203B73254F68BF00098310 /* LaunchMovementGameButton.swift */; };
+		8C39D93F2533CFFC001FEF08 /* Minigame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D93E2533CFFC001FEF08 /* Minigame.swift */; };
 		8CE1B72525215636000E0FDE /* TraceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE1B72425215636000E0FDE /* TraceViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +78,6 @@
 		1594B45E245E86B8008463BA /* PassThroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassThroughView.swift; sourceTree = "<group>"; };
 		1594B464245E9290008463BA /* TraceGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TraceGame.storyboard; sourceTree = "<group>"; };
 		15986815241EE627009456EF /* TraceGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceGame.swift; sourceTree = "<group>"; };
-		15986819242451FA009456EF /* Minigame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minigame.swift; sourceTree = "<group>"; };
 		159994D82481CA8500BC40AA /* Background.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Background.rcproject; sourceTree = "<group>"; };
 		159A41E923F49283000A5376 /* ARrehab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARrehab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		159A41EC23F49283000A5376 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +112,8 @@
 		19989C3F244AACBE001C1C7F /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		19B173692403475400845819 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		19DEDE7A243EB2B20090CA15 /* ViewManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManipulation.swift; sourceTree = "<group>"; };
+		8C203B73254F68BF00098310 /* LaunchMovementGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchMovementGameButton.swift; sourceTree = "<group>"; };
+		8C39D93E2533CFFC001FEF08 /* Minigame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Minigame.swift; path = ../../../../../.Trash/Minigame.swift; sourceTree = "<group>"; };
 		8CE1B72425215636000E0FDE /* TraceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraceViewController.swift; path = ARrehab/Minigames/TrialGame/TraceViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -209,7 +211,7 @@
 				15AC2BAF2479C5DE00D5DFB6 /* MovementGame */,
 				15AC2BAE2479C5BC00D5DFB6 /* TraceGame */,
 				15B4A790245E2EB8005CC9EC /* Default.storyboard */,
-				15986819242451FA009456EF /* Minigame.swift */,
+				8C39D93E2533CFFC001FEF08 /* Minigame.swift */,
 				15AC2BB02479C66E00D5DFB6 /* README.md */,
 			);
 			path = Minigames;
@@ -252,6 +254,7 @@
 			children = (
 				19989C3F244AACBE001C1C7F /* README */,
 				19989C3C244AA617001C1C7F /* PlaceBoardButton.swift */,
+				8C203B73254F68BF00098310 /* LaunchMovementGameButton.swift */,
 				1901C560245FE1E900896EE4 /* RotateBoardButton.swift */,
 			);
 			path = "2D Elements";
@@ -413,11 +416,12 @@
 				159A41ED23F49283000A5376 /* AppDelegate.swift in Sources */,
 				19DEDE7B243EB2B20090CA15 /* ViewManipulation.swift in Sources */,
 				19089AED24380DF70054EFED /* GameBoard.swift in Sources */,
+				8C39D93F2533CFFC001FEF08 /* Minigame.swift in Sources */,
+				8C203B74254F68BF00098310 /* LaunchMovementGameButton.swift in Sources */,
 				15BB4C89245F55130033A18D /* UIViewExtension.swift in Sources */,
 				193AC61C2443E7050046C872 /* TileGrid.swift in Sources */,
 				15264C962404DA4B00E4F2BB /* Player.swift in Sources */,
 				1901C561245FE1E900896EE4 /* RotateBoardButton.swift in Sources */,
-				1598681A242451FA009456EF /* Minigame.swift in Sources */,
 				15BB4C87245F53870033A18D /* TraceTargetType.swift in Sources */,
 				15986816241EE627009456EF /* TraceGame.swift in Sources */,
 				19B1736A2403475400845819 /* Tile.swift in Sources */,

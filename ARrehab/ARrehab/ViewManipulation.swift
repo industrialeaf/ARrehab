@@ -72,4 +72,20 @@ extension ViewController {
         }
     }
     
+    func addMgButton() {
+        let mgButton = LaunchMovementGameButton()
+        mgButton.addTarget(self, action: #selector(mgButtonClicked(sender:)), for: .touchUpInside)
+        
+        self.view.addSubview(mgButton)
+        self.view.bringSubviewToFront(mgButton)
+    
+        self.activeButtons.append(mgButton)
+    }
+    
+    @objc func mgButtonClicked(sender: UIButton) {
+        print("Button Clicked")
+        
+        self.startMinigame(gameType: .movement)
+    }
+    
 }

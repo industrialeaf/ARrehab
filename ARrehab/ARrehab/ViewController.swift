@@ -178,6 +178,8 @@ extension ViewController: ARSessionDelegate {
         //Set up the minigames
         setupMinigames(ground: self.gameBoard!.board.clone(recursive: false))
         //setupMinigames(ground: self.gameBoard!.board)
+        self.addMgButton()
+
             
     }
     
@@ -269,6 +271,10 @@ extension ViewController {
         if switchState.isOn {
             // TODO: Disable when done debugging Movement Game loading.
             self.startMinigame(gameType: .movement)
+            // Remove Mg Button once movement game has started
+            self.activeButtons.forEach { (button) in
+                button.removeFromSuperview()
+            }
         } else {
             minigameController.disableMinigame()
             self.minigameController.ground.isEnabled = false

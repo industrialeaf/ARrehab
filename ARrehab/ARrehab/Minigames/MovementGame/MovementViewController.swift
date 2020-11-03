@@ -1,5 +1,5 @@
 //
-//  TraceViewController.swift
+//  MovementViewController.swift
 //  ARrehab
 //
 //  Created by Eric Wang on 5/2/20.
