@@ -13,12 +13,12 @@ import UIKit
  Set of TraceTarget types.
  */
 enum TraceTargetType {
-    case bear, fox, other, puffer
+    case bear, fox, other, puffer, loot, berries, potion
     
     /**
      A list of all the possible target types.
      */
-    static var allTypes: [TraceTargetType] = [.bear, .fox, .puffer, .other]
+    static var allTypes: [TraceTargetType] = [.bear, .fox, .puffer, .loot, .berries, .potion, .other]
     
     /**
      The names of each type.
@@ -33,6 +33,12 @@ enum TraceTargetType {
             return "Default"
         case .puffer:
             return "Puffer"
+        case .loot:
+            return "Loot"
+        case .berries:
+            return "Berries"
+        case .potion:
+            return "Potion"
         }
     }
     
@@ -54,10 +60,16 @@ enum TraceTargetType {
             return .blue
         case .fox:
             return .green
-        case .other:
-            return .gray
         case .puffer:
             return .orange
+        case .loot:
+            return .cyan
+        case .berries:
+            return .red
+        case .potion:
+            return .brown
+        case .other:
+            return .gray
         }
     }
     
@@ -72,10 +84,17 @@ enum TraceTargetType {
             return SIMD3<Float>(-3, 0, 0)
         case .bear:
             return SIMD3<Float>(0, 0, 1)
-        case .other:
-            return SIMD3<Float>(-3, 0, 0)
+        
         case .puffer:
-            return SIMD3<Float>(-3, 1, 0)
+            return SIMD3<Float>(-3, 1, 1)
+        case .loot:
+            return SIMD3<Float>(-5, 0, 1)
+        case .berries:
+            return SIMD3<Float>(-3, 0, 1)
+        case .potion:
+            return SIMD3<Float>(-3, 0, 1)
+        case .other:
+            return SIMD3<Float>(-3, 0, 1)
         }
     }
     
@@ -88,10 +107,16 @@ enum TraceTargetType {
             return SIMD3<Float>(0, 0.5, 3)
         case .bear:
             return SIMD3<Float>(3, 0.5, 4)
-        case .other:
-            return SIMD3<Float>(3, 3, 5)
         case .puffer:
             return SIMD3<Float>(3, 3, 5)
+        case .loot:
+            return SIMD3<Float>(3, 0, 3)
+        case .berries:
+            return SIMD3<Float>(3, 0, 3)
+        case .potion:
+            return SIMD3<Float>(3, 0, 3)
+        case .other:
+            return SIMD3<Float>(3, 0, 5)
         }
     }
 }

@@ -47,6 +47,9 @@
 		19DEDE7B243EB2B20090CA15 /* ViewManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DEDE7A243EB2B20090CA15 /* ViewManipulation.swift */; };
 		8C203B74254F68BF00098310 /* LaunchMovementGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C203B73254F68BF00098310 /* LaunchMovementGameButton.swift */; };
 		8C39D93F2533CFFC001FEF08 /* Minigame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39D93E2533CFFC001FEF08 /* Minigame.swift */; };
+		8CB79C002579CDC20095B0D2 /* Loot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8CB79BFD2579CDC10095B0D2 /* Loot.usdz */; };
+		8CB79C012579CDC20095B0D2 /* Berries.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8CB79BFE2579CDC20095B0D2 /* Berries.usdz */; };
+		8CB79C022579CDC20095B0D2 /* Potion.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8CB79BFF2579CDC20095B0D2 /* Potion.usdz */; };
 		8CE1B72525215636000E0FDE /* TraceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE1B72425215636000E0FDE /* TraceViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +117,9 @@
 		19DEDE7A243EB2B20090CA15 /* ViewManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManipulation.swift; sourceTree = "<group>"; };
 		8C203B73254F68BF00098310 /* LaunchMovementGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchMovementGameButton.swift; sourceTree = "<group>"; };
 		8C39D93E2533CFFC001FEF08 /* Minigame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Minigame.swift; path = ../../../../../.Trash/Minigame.swift; sourceTree = "<group>"; };
+		8CB79BFD2579CDC10095B0D2 /* Loot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Loot.usdz; sourceTree = "<group>"; };
+		8CB79BFE2579CDC20095B0D2 /* Berries.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Berries.usdz; sourceTree = "<group>"; };
+		8CB79BFF2579CDC20095B0D2 /* Potion.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Potion.usdz; sourceTree = "<group>"; };
 		8CE1B72425215636000E0FDE /* TraceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraceViewController.swift; path = ARrehab/Minigames/TrialGame/TraceViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -220,6 +226,9 @@
 		15AC2BAE2479C5BC00D5DFB6 /* TraceGame */ = {
 			isa = PBXGroup;
 			children = (
+				8CB79BFD2579CDC10095B0D2 /* Loot.usdz */,
+				8CB79BFE2579CDC20095B0D2 /* Berries.usdz */,
+				8CB79BFF2579CDC20095B0D2 /* Potion.usdz */,
 				15986815241EE627009456EF /* TraceGame.swift */,
 				8CE1B72425215636000E0FDE /* TraceViewController.swift */,
 				15BB4C82245F53130033A18D /* TraceProgressSection.swift */,
@@ -383,8 +392,11 @@
 				15BB4C8E245FA4D60033A18D /* up.png in Resources */,
 				15CE52672460A88500A22B0B /* MovementGame.storyboard in Resources */,
 				157AE587245594FE00BE7809 /* Wolf.usdz in Resources */,
+				8CB79C022579CDC20095B0D2 /* Potion.usdz in Resources */,
+				8CB79C002579CDC20095B0D2 /* Loot.usdz in Resources */,
 				157AE5892455956000BE7809 /* RedPanda.usdz in Resources */,
 				157AE58B2455959800BE7809 /* Bear.usdz in Resources */,
+				8CB79C012579CDC20095B0D2 /* Berries.usdz in Resources */,
 				15BB4C8F245FA4D60033A18D /* down.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -592,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -42,7 +42,7 @@ class MovementGame : Minigame {
     
     var timer: Timer? = nil
     
-    var targets : [TraceTargetType] = [.fox, .bear, .puffer]
+    var targets : [TraceTargetType] = [.loot, .berries, .potion, .other]
     
     convenience required init() {
         self.init(num: 1)
